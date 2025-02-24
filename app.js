@@ -1,6 +1,5 @@
 // commonJS
 
-
 const express = require("express");
 const pizzasArr = require("./data/pizzas.js");
 
@@ -19,11 +18,11 @@ app.use(express.static('public'));
 
 function customMiddleware1(req,res,next){
     console.log("hello 1..");
-    if(consition){
+   // if(condition){
         next(); //invoke the next middleware function
-    } else {
+  //  } else {
         response.send("Sorry, no condition")
-    }
+  //  }
 }
 
 function customMiddleware2(req,res,next){
@@ -56,12 +55,10 @@ app.get("/contact", (request, response, next) => {
 })
 
 
-
 app.get("/pizza", (request,response,next) => {
 
 response.json(pizzasArr);
 })
-
 
 
 app.listen(3000, ()=> {

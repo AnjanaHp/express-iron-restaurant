@@ -17,3 +17,5 @@ const pizzasArr = [
       imageFile: "pizza-seafood.jpg"
     }
 ];
+
+module.exports = pizzasArr;
